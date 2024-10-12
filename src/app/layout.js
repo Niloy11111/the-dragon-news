@@ -1,3 +1,6 @@
+import Footer from "@/components/shared/Footer";
+import Navbar from "@/components/shared/Navbar";
+import { Container } from "@mui/material";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -11,7 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar></Navbar>
+        <Container className="min-h-screen">{children}</Container>
+        <Footer></Footer>
+      </body>
     </html>
   );
 }
